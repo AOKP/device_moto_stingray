@@ -35,20 +35,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 #$(call inherit-product, device/sample/products/backup_overlay.mk)
 $(call inherit-product, device/moto/stingray/device.mk)
 
-$(call inherit-product, vendor/aokp/products/common_tablet.mk)
-
 # Discard inherited values and use our own instead.
-PRODUCT_NAME := aokp_stingray
-PRODUCT_BRAND := verizon
+PRODUCT_NAME := full_stingray
 PRODUCT_DEVICE := stingray
-PRODUCT_MODEL := Xoom
-PRODUCT_MANUFACTURER := Motorola
-
-PRODUCT_BUILD_PROP_OVERRIDES := PRODUCT_NAME=trygon BUILD_ID=HLK75F BUILD_FINGERPRINT=verizon/trygon/stingray:3.2.4/HLK75F/221360:user/release-keys PRIVATE_BUILD_DESC="trygon-user 3.2.4 HLK75F 221360 release-keys" BUILD_NUMBER=221360
-
-# Inherit common build.prop overrides
--include vendor/aokp/products/common_versions.mk
-
-# Copy maguro specific prebuilt files
-PRODUCT_COPY_FILES +=  \
-    vendor/aokp/prebuilt/common/media/bootanimation.zip:system/media/bootanimation.zip
+PRODUCT_BRAND := Android
+PRODUCT_MODEL := Full Android on Stingray
